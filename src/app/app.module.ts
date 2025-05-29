@@ -18,7 +18,7 @@ import { ProdutoSelecionadoComponent } from './produtoSelecionado/produtoSelecio
 const routes: Routes = [
   { path: 'produto', component: ProdutoComponent},
   { path: 'produtoSelecionado', component: ProdutoSelecionadoComponent },
-  { path: '', redirectTo: localStorage.getItem('lastRoute') || '/login', pathMatch: 'full' },
+  { path: '', redirectTo: localStorage.getItem('lastRoute') || '/produto', pathMatch: 'full' },
 ];
 
 @NgModule({
