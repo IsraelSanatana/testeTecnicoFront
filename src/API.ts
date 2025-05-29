@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ConectProduto {
 //   private apiURL = 'http://localhost:3000/produtos/api';
-  private apiURL = 'https://testetecnicoapi-production.up.railway.app/api';
+  private apiURL = 'https://testetecnicoapi-production.up.railway.app/produtos/api';
 
   constructor(private http: HttpClient) { }
 
