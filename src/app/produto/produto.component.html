@@ -17,15 +17,15 @@
         </div>
 
 
-        <button class="px-6 py-4 ml-4 text-xl text-white bg-teal-800 rounded-lg shadow-md hover:bg-teal-700" (click)="ExibirModalPA(true)">
+        <button class="w-7/12 px-6 py-4 ml-4 text-xl text-white bg-teal-800 rounded-lg shadow-md hover:bg-teal-700" (click)="ExibirModalPA(true)">
             Pesquisa Avançada
         </button>
 
-        <button class="w-20 px-6 py-4 text-xl text-center text-white transition-all rounded-lg ml-80 bg-gradient-to-r from-amber-500 to-orange-600 hover:scale-105 hover:brightness-110"
+        <button class="w-20 px-6 py-4 mr-10 text-xl text-center text-white transition-all rounded-lg ml-44 bg-gradient-to-r from-amber-500 to-orange-600 hover:scale-105 hover:brightness-110"
             (click)="mostrarModalDropdown()">
             <i class="text-2xl text-white fa-solid fa-gears"></i>
         </button>
-        <div *ngIf="modalDropdown" class="absolute z-10 mt-48 bg-white rounded-md shadow-lg right-24 w-80">
+        <div *ngIf="modalDropdown" class="absolute z-10 mt-48 bg-white rounded-md shadow-lg right-8 w-80">
             <button (click)="navigateTo('/produtoSelecionado')" (click)="mostrarModalDropdown()"
             class="flex items-center w-full px-4 py-3 space-x-3 text-lg text-left transition-colors rounded-md hover:bg-gray-200">
                 <i class="text-2xl text-black fa-solid fa-list-ul"></i>
@@ -124,7 +124,7 @@
 
 
 
-    <div *ngIf="carregado" class="grid grid-cols-1 gap-8 mx-auto mt-6 max-w-7xl ml-80">
+    <div *ngIf="carregado" class="grid max-w-6xl grid-cols-1 gap-8 mx-auto mt-6 ml-44">
         <div *ngFor="let membro of produtosFiltrados"
             (click)="modalSelecao && toggleSelecionado(membro)"
             class="flex items-center p-8 space-x-6 text-white transition-all shadow-2xl cursor-pointer bg-gradient-to-r from-teal-500 via-teal-600 to-teal-700 rounded-xl hover:scale-105 hover:shadow-xl">
@@ -152,7 +152,7 @@
     </div>
 
 
-    <div *ngIf="!carregado" class="flex items-center justify-center h-screen">
+    <div *ngIf="!carregado" class="flex items-center justify-center h-screen mt-56">
         <div class="w-16 h-16 border-t-4 border-blue-500 rounded-full animate-spin"></div>
         <span class="ml-4 text-2xl font-extrabold text-white">Carregando...</span>
     </div>
